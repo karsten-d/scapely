@@ -1,5 +1,3 @@
-sudo: required
-
 language: python
 python:
   - "2.7"
@@ -9,3 +7,6 @@ install:
 
 script:
   - make check
+
+after_success:
+  - coveralls
