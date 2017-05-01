@@ -20,5 +20,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Scientific/Engineering :: GIS'
     ],
-    install_requires=[]
+    install_requires=[
+        'shapely'
+    ]
 )

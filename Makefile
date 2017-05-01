@@ -23,7 +23,14 @@ install: .make/requirements.timestamp
 
 .PHONY: test
 test: .make/requirements.timestamp
-	@echo "No tests defined until now..."
+	$(VENV_BIN)py.test --cov=scapely scapely/tests
+
+.PHONY: lint
+lint:
+	$(VENV_BIN)flake8
+
+.PHONY: check
+check: lint test
 
 .PHONY: clean
 clean:
