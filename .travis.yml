@@ -9,3 +9,6 @@ install:
 
 script:
   - make check
+
+after_success:
+  - coveralls
