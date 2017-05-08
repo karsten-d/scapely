@@ -1,12 +1,23 @@
 language: python
+
 python:
-  - "2.7"
+- '2.7'
 
 install:
-  - make install
+- make install
 
 script:
-  - make check
+- make check
 
 after_success:
-  - coveralls
+- coveralls
+
+deploy:
+  provider: pypi
+  user: karsten-d
+  password:
+    secure: Ogw2060Zk0gVGMUCHFyWgODV/G3VVqe7Jrh4tA7QOIr74NffVHfOEKVecKP0dlwkbTJuZTKOEmdjP5XbiE5lLJZI0LDThbUrpRjzVqvKzoxk53uCK6OT7rC6BTQCaCVHd2bmbj2NVsTzt2jgmXe13JhSJPNNpRDgyXjEPOakc7LfBH43L6zcpSJsBUFLSj7eIl9AdEW/Ef3S2zZOgFRsrx9kXL5LNZval25bkCx5nZ06f+TNsSG7qi1JKL3ZEYnlv+ZQxtkXBVOwaPPTSi8SpnsUa7174xUPWY6+ZH7vSh1Fjnj/3qz9a9Wk0VAkGUUDVYR7Yc2+raaKrk6//NM1e/MzkUq681wJqpp32arNMM3HeqAigkc9br+ncoY2D5KThm81o1LOIfZLG9JZFaEoj45ecbRzpU8cDWMSY4be2lXWzYf0kGT15JEYnkFdsgIPUo40jrBQTta7g680bEYf+XX9g4KwW6gnH3i0g0apSzJQJFUzihJkmcYN6fAZIXeuJ0st9XFih8Yj7OqDnkk7D+wsB/X9kHLSySxVHzqp8dxt67MIKjz6xDhsaAKK8cOCqoU43VlFfKhNOdqrftT9FVA+Fd8y9pxL6/9kLWU4nnefrjPcY9vPc2Bo55COhHkmhm1sWpGmI+dfLebcXXn+uo3S5FgiUrZ5Xy7ojeHoYps=
+  on:
+    tags: true
+    repo: karsten-d/scapely
+  distributions: sdist bdist_wheel

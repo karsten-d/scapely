@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
     name='scapely',
-    version='0.1.0',
+    version='0.0.1',
     description='Polygonal approximation of terrains and height fields',
     author='Karsten Deininger',
     url='https://github.com/karsten-d/scapely',
