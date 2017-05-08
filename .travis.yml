@@ -13,7 +13,7 @@ after_success:
 - coveralls
 
 deploy:
-  provider: pypi
+- provider: pypi
   user: karsten-d
   password:
     secure: ht+h9ANCH+CFm3cIxzcwYakDmGQCtMd4rfw40535WiIYx2TOBN4fn/3cyRDsQOB2e4AoKYWnIYHNBTj69Lm26u2GElbThBwfjUOz9x1Dq8MIcbYj1Eaupd46Vx0nwr/uTa6woPDM5dfUR5Uwuv4j5iz3gKlXWx3HtLI62Q6GMx4Y/2oYIbN0GN0XFqwpIXT6uriXkjElk+mjC1CHP+5NRlTWjhGsWjUxsvxct2KI21Vl4cezBpdYewEYsAgZvF0wKPZrJb95cJDJd8/Cp2hI/AXUwGu2gteVFrwm9xPDwZNLZY2bceSxaptlqLbGNW85EMUJEpPwv8f6PDBRv0EZeyJjPO5QX4N7UglgonwXEb2GvRfIoa9vqHbL8uQ8tDImOi0v8yKXwkAJLx0z5KJBSr5VB5OImcWnx7cqN2tcb9LJ89U6ubo7xen/oqglaTIeafQFXFS8yDWjjGRuoLtRzgJd1ii44RJAVmzukA3uwMIM8ebSSlwLrFW/LWWGfTrGF2uBz6+KwxWZC/tmbL1srvMY44Y70vLxYi6dG1hy39POdJC3Pz2Act5url+A0667pIMVzpVvqEV8tdXLLohw+4RSIBaPILY2Tf3F1ZjQuIiCnTmecvLsblLM8EilHEXbF4pwrVPYIJIbL4zWVckY3HciVfkMyTfhftvB7StDjdE=
@@ -22,3 +22,9 @@ deploy:
     repo: karsten-d/scapely
   distributions: sdist bdist_wheel
   skip_upload_docs: true
+- provider: releases
+  api_key:
+    secure: diAcZ41VZjKOoRTlJHxM97RZhRtyUgZWL1R0XrtPuM6k4jNlQRQ4TilKXjkN8MFATxoJQr2hIhIdczwdENpduAszwEL7jzrGNDhIrMxdXkuqafZY7baVWZ5niIv1uQIkFi4nXJ5btosVHPNsk5cVCVj1BTrXPg5u3aNFTIkQBTcNWLvMz6HW5aXGsxlJRhMBz+210nrtJWY4XsIawAcIX9+1oo+CJ5ZA+3mRZsSpSmnJx3I0vI/0TOXyNkHEgKXqp4IY0XG3ODV03fhVoZ1KCqUVjTDIZtz6h0jZMVZmTbh1ahju3l9W4lfIDTzen9aslrWRAUhtTCT5vhpTxvdlFZykpcXB0OBbsmvtz+2XVktmrV2qFndW0C3bLEayvjSwXSRxkgwZF1lV5mo4OojXluMbBKHgtUCBKHzbRuxyr/cZ3asXgf1AVfB/Nz56ClPgqi/laN40vgBEva7QXkFLFAGzysaS5+Q3Zqhhfqnu+jnVE7fGMQPRKYh+3QMmOiKuZpblmtd2r1/O3aXhdkvhQ0yPJWMummOi9Vs8VxCC9vIw9ckNR6G7tE/G6/TwneKjzjoH9PP4ZLl/FEL8upHQIZbHxVdT+0ZI7KCJ5xbrjihMAQ/F/HSnKW761Kj+AD8k2mXTXPkNHELI+7/rIxna3FNO3ml7uN6TsHa4WaytAhU=
+  on:
+    tags: true
+    repo: karsten-d/scapely
